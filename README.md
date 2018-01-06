@@ -1,2 +1,2 @@
-## MEAN APP
+## MONGO APP
 
