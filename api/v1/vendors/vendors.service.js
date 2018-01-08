@@ -22,7 +22,7 @@ const findVendorByCode = function(vendorCode, done) {
     let query = { "code": vendorCode };
     
     VendorModel
-        .find(query)
+        .findOne(query)
         .exec((err, colln) => {
             if(err) {
                 console.error("Error in finding vendor", vendorCode," ERROR:", err);

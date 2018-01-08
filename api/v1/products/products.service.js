@@ -46,10 +46,10 @@ const getProducts = function(done) {
 }
 
 const findProductByCode = function(productCode, done) {
-  let query = {};
+  let query = { "code": productCode };
 
   ProductModel
-    .find(query)
+    .findOne(query)
     .exec((err, colln) => {
       if(err) {
         console.error('Error in finding product by code:', productCode, ' Error:', err);

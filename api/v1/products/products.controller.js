@@ -15,9 +15,9 @@ const getProducts = function(done) {
 };
 
 const getFullProductObject = function(product, done) {
-	let prod = product[0];
+	let prod = product;
 	vendorCtrl.findVendorByCode(prod.vendor, (err, res) => {
-		prod.vendor = res[0];
+		prod.vendor = res;
 		done(null, prod);
 	});
 };
